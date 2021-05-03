@@ -1,0 +1,108 @@
+.breadcrumb {
+  display: flex;
+  align-items: center;
+  margin: 0;
+}
+
+.section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  line-height: 1;
+  padding: 30px;
+}
+
+code {
+  display: block;
+  border-radius: 10px;
+  padding: 15px;
+  color: white;
+  background-color: #000;
+  font-family: menlo, monospace;
+}
+
+h1 {
+  font-family: 'Chelsea Market', Georgia, serif;
+}
+
+p {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  margin-top: 30px;
+}
+
+.footer {
+  text-align: center;
+}
+
+/*Background & Font color options (co-1 to co-8) for different sections*/
+.co-1 {
+  background-color: #06406c;
+}
+.co-1 h1,
+.co-1 p {
+  color: #fff;
+}
+
+.co-2 {
+  background-color: white;
+}
+.co-2 h1 {
+  color: gray;
+}
+
+.co-3 {
+  background-color: #4c0d09;
+}
+.co-3 h1,
+.co-3 p {
+  color: #d3b2af;
+}
+
+.co-4 {
+  background-color: #cc4037;
+}
+.co-4 h1,
+.co-4 p {
+  color: #4c0d09;
+}
+
+.co-5 {
+  background-color: #ffc19f;
+}
+.co-5 h1,
+.co-5 p {
+  color: #cc4037;
+}
+
+.co-6 {
+  background-color: black;
+}
+.co-6 h1,
+.co-6 p {
+  color: white;
+}
+.co-6 code {
+  background-color: white;
+  color: black;
+}
+
+.co-7 {
+  background-color: #348fd4;
+}
+.co-7 h1,
+.co-7 p {
+  color: #06406c;
+}
+
+.footer {
+  background-color: #fff8c9;
+}
+.footer h1 {
+  color: #2d2700;
+}
+.footer p {
+  color: #615400;
+  margin: 0px;
+  padding: 20px;
+}

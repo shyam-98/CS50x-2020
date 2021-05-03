@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>conda cheatsheet</title>
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Chelsea+Market&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+      integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2"
+      crossorigin="anonymous"
+    />
+
+    <link href="styles.css" rel="stylesheet" />
+  </head>
+  <body>
+    <div class="breadcrumb">
+      <div><a href="./index.html">All Cheatsheets</a></div>
+      <div style="margin: 0 8px">/</div>
+      <div>conda</div>
+    </div>
+
+    <div class="section co-3">
+      <h1>Conda basics</h1>
+      <p>Verfiy conda is installed, check version number</p>
+      <code>conda info</code>
+      <p>Update conda to the current version</p>
+      <code>conda update conda</code>
+      <p>Install a package included in Anaconda</p>
+      <code>conda install PACKAGENAME</code>
+      <p>Update any installed program</p>
+      <code>conda update PACKAGENAME</code>
+      <p>Command line help</p>
+      <code>COMMANDNAME --help<br />conda install --help</code>
+    </div>
+
+    <div class="section co-1">
+      <h1>Using Environments</h1>
+      <p>Create a new environment named py35 & install Python 3.5</p>
+      <code>conda create --name py35 python=3.5</code>
+      <p>Activate the new environment to use it</p>
+      <code>source activate py35</code>
+      <p>Get a list of all environments, active environment is shown with *</p>
+      <code>conda env list</code>
+      <p>Make exact copy of an environment</p>
+      <code>conda create --clone py35 --name py35-2</code>
+      <p>List all packages and versions installed in active environment</p>
+      <code>conda list</code>
+      <p>List the history of each change to the current environment</p>
+      <code>conda list --revisions</code>
+      <p>Restore environment to a previous revision</p>
+      <code>conda install --revision 2</code>
+      <p>Save environment to a text file</p>
+      <code>conda list --explicit > bio-env.txt</code>
+      <p>Delete an environment and everything in it</p>
+      <code>conda env remove --name bio-env</code>
+      <p>Deactivate the current environment</p>
+      <code>source deactivate</code>
+      <p>Create environment from a text file</p>
+      <code>conda env create --file bio-env.txt</code>
+      <p>
+        Stack commands: create a new environment, name it bio-env and install
+        the biopython package
+      </p>
+      <code>conda create --name bio-env biopython</code>
+    </div>
+
+    <div class="section co-4">
+      <h1>Finding conda packages</h1>
+      <p>Use conda to search for a package</p>
+      <code>conda search PACKAGENAME</code>
+    </div>
+
+    <div class="section co-5">
+      <h1>Installing and updating packages</h1>
+      <p>Install a new package (Jupyter Notebook) in the active environment</p>
+      <code>conda install jupyter</code>
+      <p>Run an installed package (Jupyter Notebook)</p>
+      <code>jupyter-notebook</code>
+      <p>Install a new package (toolz) in a different environment (bio-env)</p>
+      <code>conda install --name bio-env toolz</code>
+      <p>Update a package in the current environment</p>
+      <code>conda update scikit-learn</code>
+      <p>Install a package (boltons) from a specific channel (conda-forge)</p>
+      <code>conda install --channel conda-forge boltons</code>
+      <p>
+        Install a package directly from PyPI into the current active environment
+        using pip
+      </p>
+      <code>pip install boltons</code>
+      <p>
+        Remove one or more packages (toolz, boltons) from a specific environment
+        (bio-env)
+      </p>
+      <code>conda remove --name bio-env toolz boltons</code>
+    </div>
+
+    <div class="section co-6">
+      <h1>Managing mdivtiple versions of Python</h1>
+      <p>Install different version of Python in a new environment named py34</p>
+      <code>conda create --name py34 python=3.4</code>
+      <p>
+        Switch to the new environment that has a different version of Python
+      </p>
+      <code>source activate py34</code>
+      <p>
+        Show the locations of all versions of Python that are currently in the
+        path
+      </p>
+      <code>which -a python</code>
+    </div>
+
+    <div class="footer">
+      <p>
+        CREDIT: cheatsheet from
+        <a
+          href="https://docs.conda.io/projects/conda/en/4.6.0/_downloads/52a95608c49671267e40c689e0bc00ca/conda-cheatsheet.pdf"
+          >docs.conda.io</a
+        >
+        & design inspired from
+        <a href="https://rogerdudler.github.io/git-guide/"
+          >https://rogerdudler.github.io/git-guide/</a
+        >
+      </p>
+    </div>
+  </body>
+</html>

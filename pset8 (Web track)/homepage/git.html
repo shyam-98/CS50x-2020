@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>git cheatsheet</title>
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Chelsea+Market&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+      integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2"
+      crossorigin="anonymous"
+    />
+
+    <link href="styles.css" rel="stylesheet" />
+  </head>
+  <body>
+    <div class="breadcrumb">
+      <div><a href="./index.html">All Cheatsheets</a></div>
+      <div style="margin: 0 8px">/</div>
+      <div>git</div>
+    </div>
+
+    <div class="section co-1">
+      <h1>create & clone</h1>
+      <p><b>create new</b> repository</p>
+      <code>git init</code>
+      <p><b>clone local</b> repository</p>
+      <code>git clone /path/to/repository</code>
+      <p><b>clone remote</b> repository</p>
+      <code>git clone username@host:path/to/repository</code>
+    </div>
+
+    <div class="section co-2">
+      <h1>add & remove</h1>
+      <p><b>add</b> changes to INDEX</p>
+      <code>git add &lt;filename&gt;</code>
+      <p><b>add</b> all changes to INDEX</p>
+      <code>git add *</code>
+      <p><b>remove/delete</b></p>
+      <code>git rm &lt;filename&gt;</code>
+    </div>
+
+    <div class="section co-3">
+      <h1>commit & synchronize</h1>
+      <p>commit changes</p>
+      <code>git commit -m "commit message"</code>
+      <p>push changes to remote repository</p>
+      <code>git pust origin master</code>
+      <p><b>connect</b> local repository to remote repository</p>
+      <code>git remote add origin &lt;server&gt;</code>
+      <p><b>update</b> local repository with remote repository</p>
+      <code>git pull</code>
+    </div>
+
+    <div class="section co-4">
+      <h1>branches</h1>
+      <p><b>create</b> new branch</p>
+      <code>git checkout -b &lt;branch&gt;</code>
+      <p><b>switch to</b> master branch</p>
+      <code>git checkout master</code>
+      <p><b>delete</b> branch</p>
+      <code>git branch -d &lt;branch&gt;</code>
+      <p><b>push branch</b> to remote repository</p>
+      <code>git push origin &lt;branch&gt;</code>
+    </div>
+
+    <div class="section co-5">
+      <h1>merge</h1>
+      <p><b>merge changes</b> from another branch</p>
+      <code>git merge &lt;branch&gt;</code>
+      <p><b>view changes</b> between different braches</p>
+      <code>git diff &lt;source branch&gt; &lt;target branch&gt;</code>
+    </div>
+
+    <div class="section co-6">
+      <h1>tagging</h1>
+      <p><b>create tag</b></p>
+      <code>git tag &lt;tag&gt; &lt;commit ID&gt;</code>
+      <p><b>get commit IDs</b></p>
+      <code>git log</code>
+    </div>
+
+    <div class="section co-7">
+      <h1>restore</h1>
+      <p><b>replace</b> working copy with the latest from HEAD</p>
+      <code>git checkout --&lt;filename&gt;</code>
+    </div>
+
+    <div class="footer">
+      <p>
+        CREDIT: cheatsheet & design inspired from
+        <a href="https://rogerdudler.github.io/git-guide/"
+          >https://rogerdudler.github.io/git-guide/</a
+        >
+      </p>
+    </div>
+  </body>
+</html>
